@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get "/tadpoles/:id/metamorphose", to: "tadpoles#metamorphose"
 
-  post "/tadpoles/:id/metamorphose", to: "tadpoles#metamorphose"
+  post "/tadpoles/:id/metamorphose", to: "tadpoles#metamorphose", as: "metamorphose"
 
   # nested resources
   resources :frogs do

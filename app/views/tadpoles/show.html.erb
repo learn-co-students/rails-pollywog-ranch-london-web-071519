@@ -1,10 +1,9 @@
 <div class="card">
   <h1><%= @tadpole.name %> the Tadpole</h1>
 
-  <!-- make form to make "Become a frog" button here -->
-  <p><a href="/tadpoles/<%= @tadpole.id %>/metamorphose" class="btn btn-primary">Become a frog</a></p>
-  <!-- the form should post to /tadpoles/:id/metamorphose -->
-
+  <%= form_tag metamorphose_path, method: :post do %>
+    <%= submit_tag "Become a frog" %>
+    <% end %>
 
   <p>Color: <%= @tadpole.color %></p>
   <p>Parent: <a href="/frogs/<%= @tadpole.frog.id %>"><%= @tadpole.frog.name %></a></p>
